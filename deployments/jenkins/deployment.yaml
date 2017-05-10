@@ -35,6 +35,8 @@ spec:
             mountPath: /var/run/docker.sock
           - name: system
             mountPath: /sys/fs/cgroup
+          - name: jenkins-home-volume
+            mountPath: /var/jenkins_home
       volumes:
         - hostPath:
             path: /var/run/docker.sock
@@ -42,7 +44,7 @@ spec:
         - hostPath:
             path: /sys/fs/cgroup
           name: system
-        - name: jenkins-home
+        - name: jenkins-home-volume
           gcePersistentDisk:
             pdName: jenkins-home
             fsType: ext4
