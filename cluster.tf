@@ -31,11 +31,12 @@ resource "google_container_cluster" "cluster" {
     command = "kubectl create secret generic jenkins --from-file=deployments/jenkins/options --namespace=default"
   }
 
+  /*
   provisioner "local-exec" {
     command = "gcloud compute images create jenkins-home-image --source-uri https://storage.googleapis.com/solutions-public-assets/jenkins-cd/jenkins-home-v3.tar.gz"
   }
 
   provisioner "local-exec" {
     command = "gcloud compute disks create jenkins-home --image jenkins-home-image --zone=${var.gcloud-zone}"
-  }
+  }*/
 }

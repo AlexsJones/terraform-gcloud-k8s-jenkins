@@ -2,12 +2,20 @@ variable "gcloud-region" {
   default = "europe-west1"
 }
 
+variable "gcloud-project" {
+  default = ""
+}
+
+variable "cluster-name" {
+  default = ""
+}
+
 variable "gcloud-zone" {
   default = "europe-west1-b"
 }
 
 variable "cluster-size" {
-  default = 3
+  default = 2
 }
 
 variable "machine-type" {
@@ -15,5 +23,9 @@ variable "machine-type" {
 }
 
 variable "username" {
-  default = "k8sadmin"
+  default = ""
+}
+
+variable "password" {
+  default = ""
 }
